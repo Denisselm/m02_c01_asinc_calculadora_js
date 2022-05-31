@@ -1,11 +1,13 @@
-// Ejercicio asincrónico módulo 2 clase 1
-edad = parseInt(prompt("Ingresa tu edad: "));
-alert("El usuario tiene " + (edad * 365) + " días");
-edad_maxima = parseInt(prompt("ingresa tu edad máxima"))
-alert("El usuario tendrá " + (edad_maxima * 365) + " días");
-const snack_favorito = prompt("Ingresa el nombre de tu snack favorito: ");
-const snacks_a_comer = parseInt(prompt("¿Cuántos snacks comes por día?: "));
-const snack_totales = snacks_a_comer * edad_maxima * 365;
-alert("Necesitas " + snack_totales + " snacks para que te alcancen hasta los " + edad_maxima + " años");
-const precio_snack = prompt("¿Cuál es el precio de tu snack favorito?: ");
-alert("El total que gastarás en: " + snack_favorito + " es de: " + "$" + (precio_snack * snack_totales) + " pesos")
+/*tarea asincrónica clase 1 módulo 2, calculadora con javascript*/
+
+const edad = parseInt(prompt('Ingrese su edad'));
+const cant_dias = (edad * 365)
+const edad_maxima = parseInt(prompt("ingresa la edad máxima que crees que tendrás"))
+const edadRestante = edad - edad_maxima
+const snack = prompt('¿Cuál es tu snack Favorito?');
+const snack_dias = parseInt(prompt('¿Cuántos comes al día?'));
+const dias_restantes = (edad_maxima - edad) * 365
+const precio = parseInt(prompt('¿Cuál es su precio?'));
+const cantidad_snack = (dias_restantes * snack_dias);
+
+alert('Tus' + edadRestante + ' años restantes a tu edad actual, equivalen a ' + cant_dias + ' dias\n' + 'por los que necesitarás tener $ ' + (cantidad_snack * precio) + ' pesos\n Para poder comer ' + cantidad_snack + ' ' + snack + ' por lo que te queda de vida');
